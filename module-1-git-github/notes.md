@@ -1,24 +1,24 @@
 # Module 1 — Git & GitHub
 
-**Student:** [your name]
-**Date:** [date]
+**Student:** Michaelle Vickeemae G. Sarmiento
+**Date:** September 25, 2026
 
 ---
 
 ## What is Git? What is GitHub? (explain like you're teaching a friend who's never used either)
 
-[Write your own explanation here. What problem does Git actually solve? How is GitHub different from Git itself?]
+Git is a tool that runs and keeps track of changes in a project. While, Github is a online platform that can keeps Git repositories.  In a real world scenario, we can think that a pencil is the Git, while the notebook is the Github. With the use of pencil, we can write and erase information. If we write something then realizes something's wrong, we can easily use the eraser to go back to our initial written information. And then, after we write or finish our written information, since it is written in the notebook, we can easily give the notebook to our teacher or classmates for them to see our work and give comments or feedback or correct our information if necessary.
 
 ---
 
 ## Key vocabulary (in your own words)
 
-- repository:
-- commit:
-- branch:
-- push / pull:
-- pull request:
-- merge conflict:
+- repository: storage
+- commit: save changes
+- branch: separate workspace
+- push / pull: upload and download
+- pull request: request for approval
+- merge conflict: overlapping work
 
 ---
 
