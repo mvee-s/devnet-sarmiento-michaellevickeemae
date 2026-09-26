@@ -13,7 +13,7 @@ movie_list = [
 ]
 
 def display_menu():
-    print("=== Movie Collection Manager")
+    print("\n=== Movie Collection Manager")
     print("1. Add a movie")
     print("2. View all movies")
     print("3. Count watched vs unwatched")
@@ -25,7 +25,7 @@ def display_menu():
 
 
 def add_movie(movie_list):
-    movie_title = input("Enter movie title: ")
+    movie_title = input("\nEnter movie title: ")
     director_name = input("Enter director: ")
     status = input("Enter status (watched/unwatched): ")
 
@@ -41,9 +41,9 @@ def add_movie(movie_list):
 def view_movies(movie_list):
     
     if not movies:
-        print("No movies in the collection.")
+        print("\nNo movies in the collection.")
     else:
-        print("=== All Movies ===")
+        print("\n=== All Movies ===")
         print(movies)
     pass
 
@@ -59,16 +59,16 @@ def view_movies(movie_list):
 
 
 def find_movie(movie_list):
-    look_movie = input("Enter movie title: ")
-    print(look_movie)
+    search = input("Enter movie title: ").lower()
+    match_found = 0
 
-    if look_movie in movies:
-        print("Movie found: ")
-        print(look_movie)
+    for movie in movies:
+        if search in movie.lower():
+            print(movie)
+            match_found += 1
 
-    else:
-        print("Movie not found.")
-    
+        if match_found == 0:
+            print("Movie not found.")
     # search should be case-insensitive
     
     pass
@@ -89,7 +89,7 @@ def main():
             count_watched_unwatched()
 
         elif user_input == 4:
-            find_movie()
+            find_movie(movies)
 
         elif user_input == 5:
             break
