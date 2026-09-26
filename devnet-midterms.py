@@ -32,7 +32,7 @@ def add_movie(movie_list):
 
     print("Movie added successfully.")
     
-    movies.append(f"{movie_title} - {director_name} - {status}")
+    movies.append(movie_title)
     pass
 
 
