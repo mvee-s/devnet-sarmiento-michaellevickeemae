@@ -8,10 +8,9 @@ Student: Michaelle Vickeemae G. Sarmiento
 """
 
 movies = []
-
-movie_title = input("Enter movie title: ")
-director_name = input("Enter director: ")
-status = input("Enter status (watched/unwatched): ")
+movie_list = [
+    " - ".join(movies[i : i +3]) for i in range(0, len(movies), 3)
+]
 
 def display_menu():
     print("=== Movie Collection Manager")
@@ -26,24 +25,26 @@ def display_menu():
 
 
 def add_movie(movie_list):
-    print(movie_title)
-    print(director_name)
-    print(status)
+    movie_title = input("Enter movie title: ")
+    director_name = input("Enter director: ")
+    status = input("Enter status (watched/unwatched): ")
+
+    movies.append(movie_title)
+    movies.append(director_name)
+    movies.append(status)
 
     print("Movie added successfully.")
-    
-    movies.append(movie_title)
+
     pass
 
 
 def view_movies(movie_list):
-    for movie in movies:
-        # if
+    
+    if not movies:
+        print("No movies in the collection.")
+    else:
         print("=== All Movies ===")
         print(movies)
-    
-    # handle empty list
-    #no movies in the collection
     pass
 
 #count = 0
@@ -57,12 +58,20 @@ def view_movies(movie_list):
 #    pass
 
 
-# def find_movie(movie_list):
-#     # ask for a movie title
-#     # search the list
-#     # search should be case-insensitive
-#     # print the result or "Movie not found."
-#     pass
+def find_movie(movie_list):
+    look_movie = input("Enter movie title: ")
+    print(look_movie)
+
+    if look_movie in movies:
+        print("Movie found: ")
+        print(look_movie)
+
+    else:
+        print("Movie not found.")
+    
+    # search should be case-insensitive
+    
+    pass
 
 
 def main():
@@ -71,10 +80,10 @@ def main():
         user_input = int(input("Choose an option: "))
 
         if user_input == 1:
-            add_movie()
+            add_movie(movie_list)
 
         elif user_input == 2:
-            view_movies()
+            view_movies(movies)
 
         elif user_input == 3:
             count_watched_unwatched()
@@ -87,9 +96,6 @@ def main():
         else:
             print("Choose a valid option number.")
             continue
-
-    # create the main menu loop
-    # call the appropriate function based on the user's choice
     pass
 
 
